@@ -4,6 +4,7 @@ body {
     margin: 50px auto;
     padding: 20px;
     background-color: #f5f5f5;
+    line-height: 1.6;
 }
 
 .calculator {
@@ -15,12 +16,16 @@ body {
 
 .form-group {
     margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
 }
 
 label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
+    color: #333;
 }
 
 input[type="number"], select {
@@ -30,6 +35,7 @@ input[type="number"], select {
     border-radius: 5px;
     font-size: 16px;
     box-sizing: border-box;
+    margin-top: 5px;
 }
 
 .radio-group, .checkbox-group {
@@ -42,10 +48,18 @@ input[type="number"], select {
     margin-bottom: 8px;
     font-weight: normal;
     cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+
+.radio-group label:hover, .checkbox-group label:hover {
+    background-color: #f9f9f9;
 }
 
 .radio-group input, .checkbox-group input {
     margin-right: 10px;
+    transform: scale(1.1);
 }
 
 .price-display {
@@ -57,8 +71,28 @@ input[type="number"], select {
     font-weight: bold;
     color: #2e7d32;
     margin-top: 20px;
+    border: 2px solid #4caf50;
 }
 
 .hidden {
-    display: none;
+    display: none !important;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #4caf50;
+    padding-bottom: 10px;
+}
+
+select {
+    background-color: white;
+    cursor: pointer;
+}
+
+input[type="number"]:focus, select:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
 }
